@@ -20,8 +20,9 @@ public class PetaloControl : MonoBehaviour
 
     public static Texture2D texturaFlotante;
 
-    public Petalo petalo = new Petalo();
-    public UnityEngine.UI.RawImage imPrevia;
+    public SubPetalo petalo = new SubPetalo();
+    public GameObject petalosInstancias;
+    public int numeropetalos;
 
     private void Awake()
     {
@@ -41,6 +42,21 @@ public class PetaloControl : MonoBehaviour
     {
         miMFilter.mesh = meshFinal;
         ActualizarMalla();
+    }
+
+    [ContextMenu("Crear Petalos")]
+    public void CrearPetalos()
+    {
+        GameObject G20 = new GameObject();
+
+        for (int i = 0; i < numeropetalos; i++)
+        {
+            GameObject go = Instantiate(petalosInstancias, Vector3.zero, Quaternion.identity) as GameObject;
+            go.GetComponent<Petalo>().petalo = petalo;
+            go.transform.Rotate(Vector3.up * 360/numeropetalos * i);
+            go.transform.parent = G20.transform;
+        }
+        G20.name = "Flor" + Random.Range(0, 100);
     }
 
     [ContextMenu("Actualizar")]
@@ -82,7 +98,7 @@ public class PetaloControl : MonoBehaviour
 
 
 [System.Serializable]
-public class Petalo
+public class SubPetalo
 {
     public Mesh malla;
     public Material material;

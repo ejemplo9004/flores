@@ -11,7 +11,7 @@ public class Pintar : MonoBehaviour
     public Camera camara;
     public GameObject vistaPrevia;
     public RenderTexture rt;
-    
+
     // Start is called before the first frame update
     void Start()
     {
