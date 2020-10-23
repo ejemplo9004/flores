@@ -10,6 +10,7 @@ public class Pintar : MonoBehaviour
     public float tamaño = 0.5f;
     public Camera camara;
     public GameObject vistaPrevia;
+    public RenderTexture rt;
     
     // Start is called before the first frame update
     void Start()
@@ -50,5 +51,14 @@ public class Pintar : MonoBehaviour
         {
             if(gos[i].gameObject != gameObject) Destroy(gos[i].gameObject);
         }
+    }
+
+    public void Guardar()
+    {
+        RenderTexture.active = rt;
+        Texture2D t2d = new Texture2D(rt.width, rt.height);
+        t2d.ReadPixels(new Rect(0, 0, rt.width, rt.height),0,0);
+        t2d.Apply();
+        PetaloControl.texturaFlotante = t2d;
     }
 }

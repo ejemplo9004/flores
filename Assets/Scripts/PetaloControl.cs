@@ -18,6 +18,11 @@ public class PetaloControl : MonoBehaviour
     private Vector3[] v2;
     private Vector3[] vFinal;
 
+    public static Texture2D texturaFlotante;
+
+    public Petalo petalo = new Petalo();
+    public UnityEngine.UI.RawImage imPrevia;
+
     private void Awake()
     {
         miRenderer = GetComponent<MeshRenderer>();
@@ -36,6 +41,18 @@ public class PetaloControl : MonoBehaviour
     {
         miMFilter.mesh = meshFinal;
         ActualizarMalla();
+    }
+
+    [ContextMenu("Actualizar")]
+    public void Actualizar()
+    {
+        ActualizarMalla();
+        petalo.malla = meshFinal;
+        petalo.textura2 = texturaFlotante;
+        petalo.AsignarMaterial (GetComponent<MeshRenderer>().material);
+
+        petalo.Inicializar();
+        GetComponent<MeshRenderer>().material = petalo.material;
     }
 
     public void CalcularVFinal()
@@ -61,4 +78,27 @@ public class PetaloControl : MonoBehaviour
     {
         ActualizarMalla();
     }
+}
+
+
+[System.Serializable]
+public class Petalo
+{
+    public Mesh malla;
+    public Material material;
+    public Texture2D textura1;
+    public Texture2D textura2;
+    public Color color1;
+    public Color color2;
+
+    public void AsignarMaterial(Material m)
+    {
+        material = new Material(m);
+    }
+
+    public void Inicializar()
+    {
+        material.SetTexture("_Fondo2", textura2);
+    }
+
 }
