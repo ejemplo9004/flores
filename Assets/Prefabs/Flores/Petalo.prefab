@@ -51,7 +51,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 2977e64c33844b74898d47b368259057, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,3 +99,4 @@ MonoBehaviour:
     textura2: {fileID: 0}
     color1: {r: 0, g: 0, b: 0, a: 0}
     color2: {r: 0, g: 0, b: 0, a: 0}
+  aleatoreidadRotacion: {x: -10, y: 10}
