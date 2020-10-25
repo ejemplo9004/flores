@@ -10,6 +10,8 @@ public class Camara : MonoBehaviour
     public Transform pivote3;
     public float rangoMovimiento;
     public float velMovimiento;
+    public float zoom;
+    public float zoomCambioDeTamaño;
 
     float posicionMovimientoX;
     float posicionMovimientoZ;
@@ -28,6 +30,18 @@ public class Camara : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        camara.fieldOfView = zoom;
+        if (Input.mouseScrollDelta.y > 0)
+        {
+            zoom -= zoomCambioDeTamaño * Time.deltaTime;
+            zoom = Mathf.Clamp(zoom, 20f, 60f);          
+        }
+        if (Input.mouseScrollDelta.y < 0)
+        {
+            zoom += zoomCambioDeTamaño * Time.deltaTime;
+            zoom = Mathf.Clamp(zoom, 20f, 60f);        
+        }
+
         transform.position = Vector3.Lerp(transform.position, posiciones[indicePosicion].position, 0.1f);
         if (Input.GetMouseButton(2))
         {
