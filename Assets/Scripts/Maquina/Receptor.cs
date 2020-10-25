@@ -5,26 +5,25 @@ using UnityEngine;
 public class Receptor : MonoBehaviour
 {
     public Mauina maquina;
+    public ParticleSystem particulas;
     public Receptaculo r;
+    public GameObject particulasUso;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (r == null && other.CompareTag("planta"))
         {
-            if(other.GetComponent<Receptaculo>() != null)
+            MoverFlor mf = other.GetComponent<MoverFlor>();
+            if(mf != null && !mf.ago.arrastrando)
             {
                 other.transform.parent = transform;
                 other.transform.localPosition = Vector3.zero;
+                r = mf.r;
+                particulas.Play();
             }
         }
     }
-    private void OnTriggerStay(Collider other)
-    {
-        if (r==null && other.CompareTag("planta"))
-        {
-            r = other.GetComponent<Receptaculo>();
-        }
-    }
+
 
     private void OnTriggerExit(Collider other)
     {
@@ -32,5 +31,12 @@ public class Receptor : MonoBehaviour
         {
             r = null;
         }
+    }
+
+    public void Usar()
+    {
+        Destroy(r.gameObject);
+        Instantiate(particulasUso, transform.position + Vector3.up*2, transform.rotation);
+        particulas.Stop();
     }
 }

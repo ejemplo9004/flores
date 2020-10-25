@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3655257037029441919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3655257037029441914}
+  - component: {fileID: 3655257037029441913}
+  - component: {fileID: 3655257037029441912}
+  - component: {fileID: 3655257037029441915}
+  m_Layer: 0
+  m_Name: FlorMover
+  m_TagString: planta
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3655257037029441914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655257037029441919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -28.61, y: -0.44, z: 4.3947563}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &3655257037029441913
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655257037029441919}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.46
+  m_Height: 7.69
+  m_Direction: 1
+  m_Center: {x: 0, y: 3.09, z: 0}
+--- !u!114 &3655257037029441912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655257037029441919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841671c06132cfd40ad85a1399e28b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  capas:
+    serializedVersion: 2
+    m_Bits: 256
+  posicionInicial: {x: 0, y: 0, z: 0}
+  camara: {fileID: 0}
+  arrastrando: 0
+  accionSoltar:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3655257037029441915}
+        m_MethodName: PosicionarSuelta
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  accionAgarrar:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3655257037029441915}
+        m_MethodName: PosicionarAgarrada
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  animator: {fileID: 0}
+--- !u!114 &3655257037029441915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655257037029441919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd4a86af18414040b43f0ffe2e45a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flor: {fileID: 0}
+  pSuelta: {x: 1, y: 1, z: 1}
+  pAgarrada: {x: 0, y: 3, z: 0}
+  r: {fileID: 0}
+  ago: {fileID: 3655257037029441912}
