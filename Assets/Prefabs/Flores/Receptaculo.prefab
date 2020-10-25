@@ -58,6 +58,7 @@ MonoBehaviour:
   malla: {fileID: 808713748111551637}
   petalosInstancias: {fileID: 6745531760765333903, guid: 423fd12e1c3a5854a8ecaa9bf5764149,
     type: 3}
+  aleatoreidad: 0
 --- !u!1 &6938383685981683640
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +72,7 @@ GameObject:
   - component: {fileID: 808713748111551637}
   - component: {fileID: 2311148722784767716}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Caliz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 6938383685981683640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.7036514, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1088081518234660183}
   m_RootOrder: 0
@@ -98,7 +99,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6938383685981683640}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4711208715938537054, guid: c801a81787fe7034bab2dacc9c6519ee, type: 3}
 --- !u!23 &808713748111551637
 MeshRenderer:
   m_ObjectHideFlags: 0

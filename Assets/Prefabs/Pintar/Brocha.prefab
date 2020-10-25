@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5739966519436635077}
   - component: {fileID: 5739966519436635076}
   - component: {fileID: 5739966519436635083}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Brocha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
