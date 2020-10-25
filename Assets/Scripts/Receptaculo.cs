@@ -51,9 +51,10 @@ public class Receptaculo : MonoBehaviour
             {
                 p.dePodar = false;
                 p = null;
-                Destroy(gameObject);
+                Coca.singleton.Encocar(transform);
             }
         }
         tiempoClic = Time.time;
     }
+
 }

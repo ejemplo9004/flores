@@ -29,12 +29,15 @@ public class Planta : MonoBehaviour
             {
                 tiempo = Random.Range(esperasEntreFlores.x, esperasEntreFlores.y);
                 yield return new WaitForSeconds(tiempo);
-                GameObject f = Instantiate(fc.flor) as GameObject;
-                f.transform.parent = posicionCrear;
-                f.transform.localPosition = Vector3.zero;
-                f.transform.localEulerAngles = Vector3.zero;
-                f.GetComponent<Receptaculo>().p = this;
-                dePodar = true;
+                if (fc.flor != null)
+                {
+                    GameObject f = Instantiate(fc.flor) as GameObject;
+                    f.transform.parent = posicionCrear;
+                    f.transform.localPosition = Vector3.zero;
+                    f.transform.localEulerAngles = Vector3.zero;
+                    f.GetComponent<Receptaculo>().p = this;
+                    dePodar = true;
+                }
             }
         }
         animator.SetBool("viva", false);

@@ -13,6 +13,10 @@ public class AgarrarObjetos : MonoBehaviour
     private void Start()
     {
         posicionInicial = transform.position;
+        if (camara == null)
+        {
+            camara = Camara.singleton.camara;
+        }
     }
 
     private void Update()

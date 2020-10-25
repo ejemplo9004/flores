@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7759613098099641761}
   - component: {fileID: 5121590079724911986}
   - component: {fileID: 8258347424329543045}
+  - component: {fileID: 5580426859770663451}
   m_Layer: 0
   m_Name: Receptaculo
-  m_TagString: Untagged
+  m_TagString: planta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,6 +93,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &5580426859770663451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3966615469989364655}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841671c06132cfd40ad85a1399e28b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  capas:
+    serializedVersion: 2
+    m_Bits: 256
+  posicionInicial: {x: 0, y: 0, z: 0}
+  camara: {fileID: 0}
+  arrastrando: 0
+  accionSoltar:
+    m_PersistentCalls:
+      m_Calls: []
+  accionAgarrar:
+    m_PersistentCalls:
+      m_Calls: []
+  animator: {fileID: 0}
 --- !u!1 &6938383685981683640
 GameObject:
   m_ObjectHideFlags: 0
