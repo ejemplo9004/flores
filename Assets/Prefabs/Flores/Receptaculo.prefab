@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1088081518234660183}
   - component: {fileID: 7759613098099641761}
+  - component: {fileID: 5121590079724911986}
+  - component: {fileID: 8258347424329543045}
   m_Layer: 0
   m_Name: Receptaculo
   m_TagString: Untagged
@@ -59,6 +61,37 @@ MonoBehaviour:
   petalosInstancias: {fileID: 6745531760765333903, guid: 423fd12e1c3a5854a8ecaa9bf5764149,
     type: 3}
   aleatoreidad: 0
+  p: {fileID: 0}
+  tiempoClic: 0
+--- !u!135 &5121590079724911986
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3966615469989364655}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.8314309
+  m_Center: {x: 0, y: 0.3314309, z: 0}
+--- !u!54 &8258347424329543045
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3966615469989364655}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6938383685981683640
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,7 +103,6 @@ GameObject:
   - component: {fileID: 1192565350481633259}
   - component: {fileID: 1632246501268601496}
   - component: {fileID: 808713748111551637}
-  - component: {fileID: 2311148722784767716}
   m_Layer: 0
   m_Name: Caliz
   m_TagString: Untagged
@@ -139,16 +171,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &2311148722784767716
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6938383685981683640}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

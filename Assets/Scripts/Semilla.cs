@@ -4,6 +4,8 @@ public class Semilla : MonoBehaviour
 {
     public GameObject flor;
     public FlowersController fc;
+    public Transform pivoteFlor;
+    public GameObject lienzo;
      
     private void OnTriggerEnter(Collider other)
     {
@@ -27,6 +29,14 @@ public class Semilla : MonoBehaviour
         if (fc != null && !fc.viva && !fc.active)
         {
             fc.Sembrar(flor);
+        }
+    }
+    private void OnMouseDown()
+    {
+        if (flor==null)
+        {
+            GameObject li = Instantiate(lienzo) as GameObject;
+            li.GetComponent<CreadorFlor>().semilla = this;
         }
     }
 }

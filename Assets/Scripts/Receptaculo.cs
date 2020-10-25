@@ -12,7 +12,9 @@ public class Receptaculo : MonoBehaviour
     public MeshRenderer malla;
     public GameObject petalosInstancias;
     public float aleatoreidad;
+    public Planta p;
 
+    public float tiempoClic;
     IEnumerator Start()
     {
         malla.gameObject.SetActive(false);
@@ -39,4 +41,19 @@ public class Receptaculo : MonoBehaviour
         }
     }
 
+
+    private void OnMouseDown()
+    {
+        float t = Time.time - tiempoClic;
+        if (t < 0.2f)
+        {
+            if (p!=null)
+            {
+                p.dePodar = false;
+                p = null;
+                Destroy(gameObject);
+            }
+        }
+        tiempoClic = Time.time;
+    }
 }

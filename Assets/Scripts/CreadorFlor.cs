@@ -151,6 +151,9 @@ public class CreadorFlor : MonoBehaviour
         rece.color = color3;
         rece.aleatoreidad = aleatoreidad;
         semilla.flor = rcp;
+        rcp.transform.parent = semilla.pivoteFlor;
+        rcp.transform.localPosition = Vector3.zero;
+        rcp.transform.localEulerAngles = Vector3.zero;
         Destroy(gameObject);
     }
 }
