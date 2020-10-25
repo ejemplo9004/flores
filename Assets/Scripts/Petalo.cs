@@ -11,7 +11,8 @@ public class Petalo : MonoBehaviour
     private MeshRenderer miRenderer;
     private MeshFilter miMFilter;
     public Vector2 aleatoreidadRotacion;
-
+    bool escalar = false;
+    float escala = 0;
     private void Awake()
     {
         miRenderer = GetComponent<MeshRenderer>();
@@ -27,6 +28,22 @@ public class Petalo : MonoBehaviour
             miRenderer.material.SetColor("_Color1", petalo.color1);
             miRenderer.material.SetColor("_Color2", petalo.color2);
             transform.Rotate(AletoRota(), 0, 0);
+        }
+        transform.localScale = Vector3.zero;
+        Invoke("IniciarEscalado", Random.Range(0, 0.5f));
+    }
+
+    void IniciarEscalado()
+    {
+        escalar = true;
+    }
+
+    private void Update()
+    {
+        if (escalar && escala<1)
+        {
+            escala += Time.deltaTime*2;
+            transform.localScale = Vector3.one * escala;
         }
     }
 
