@@ -9,6 +9,8 @@ public class FlowersController : MonoBehaviour
     public float velocidad;
     public float velocidadRecurso;
     public GameObject flor;
+    public GameObject mataPlantada;
+    public GameObject mata;
     void Start()
     {
         
@@ -50,11 +52,13 @@ public class FlowersController : MonoBehaviour
     }
     public  void Sembrar(GameObject other)
     {
-        if (flor != null)
+        if (mataPlantada != null)
         {
-            Destroy(flor);
+            Destroy(mataPlantada);
         }
-        flor = Instantiate(other, transform.position, transform.rotation);
+        flor = other;
+        mataPlantada = Instantiate(mata, transform.position, transform.rotation, transform);
+        mata.GetComponent<Planta>().fc = this;
         Restart();
         active = true;
     }

@@ -8,6 +8,8 @@ public class AgarrarObjetos : MonoBehaviour
     public Camera camara;
     public bool arrastrando;
     public UnityEvent accionSoltar;
+    public UnityEvent accionAgarrar;
+    public Animator animator;
     private void Start()
     {
         posicionInicial = transform.position;
@@ -27,6 +29,7 @@ public class AgarrarObjetos : MonoBehaviour
             {
                 arrastrando = false;
                 accionSoltar.Invoke();
+                if (animator!= null) animator.SetBool("activo", false);
             }
         }
     }
@@ -34,6 +37,8 @@ public class AgarrarObjetos : MonoBehaviour
     private void OnMouseDown()
     {
         arrastrando = true;
+        if (animator != null) animator.SetBool("activo", true);
+        accionAgarrar.Invoke();
     }
 
     public void ReiniciarPosicion()

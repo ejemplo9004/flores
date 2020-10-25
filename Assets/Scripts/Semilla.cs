@@ -3,27 +3,30 @@
 public class Semilla : MonoBehaviour
 {
     public GameObject flor;
-    
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public FlowersController fc;
+     
     private void OnTriggerEnter(Collider other)
     {
-        FlowersController fc = other.GetComponent<FlowersController>();
-        if (fc != null)
+        FlowersController fc2 = other.GetComponent<FlowersController>();
+        if (fc2 != null)
         {
-        print(other.name);
-            if (!fc.viva && !fc.active)
-            {
-                fc.Sembrar(flor);
-            }
+            fc = fc2;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (fc = other.GetComponent<FlowersController>())
+        {
+            fc = null;
+        }
+    }
+
+    public void Sembrar()
+    {
+        if (fc != null && !fc.viva && !fc.active)
+        {
+            fc.Sembrar(flor);
         }
     }
 }

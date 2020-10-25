@@ -27,6 +27,8 @@ public class CreadorFlor : MonoBehaviour
 
     public GameObject prReceptaculo;
 
+    public Semilla semilla;
+
     float h = 0.5f;
     float s = 0;
     float v = 1;
@@ -148,6 +150,7 @@ public class CreadorFlor : MonoBehaviour
         rece.numeroPetalos = numeroPetalos;
         rece.color = color3;
         rece.aleatoreidad = aleatoreidad;
+        semilla.flor = rcp;
         Destroy(gameObject);
     }
 }

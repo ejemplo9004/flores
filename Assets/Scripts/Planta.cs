@@ -13,6 +13,7 @@ public class Planta : MonoBehaviour
     
     IEnumerator Start()
     {
+        fc = GetComponentInParent<FlowersController>();
         yield return new WaitForSeconds(esperaInicial);
         StartCoroutine(Esperando());
     }
