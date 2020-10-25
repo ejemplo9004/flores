@@ -3,49 +3,41 @@ using UnityEngine.Events;
 
 public class AgarrarObjetos : MonoBehaviour
 {
-    private float posicionY;
-    Vector3 compensar;
-    bool agarrando;
-    public Camera CamaraPrincipal;
-    [Space]
-    [SerializeField]
-    public UnityEvent comienzoDeAgarre;
-    [SerializeField]
-    public UnityEvent finDeAgarre;
+    public LayerMask capas;
+    public Vector3 posicionInicial;
+    public Camera camara;
+    public bool arrastrando;
+    public UnityEvent accionSoltar;
     private void Start()
     {
-        posicionY = CamaraPrincipal.WorldToScreenPoint(transform.position).z;
+        posicionInicial = transform.position;
     }
+
     private void Update()
     {
-        if (agarrando)
+        if (arrastrando)
         {
-            Vector3 posicion = new Vector3(Input.mousePosition.x, Input.mousePosition.y, posicionY);
-            transform.position = CamaraPrincipal.ScreenToWorldPoint(posicion + new Vector3(compensar.x, compensar.y));
+            RaycastHit hit;
+            Ray rayo = camara.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(rayo,out hit,1000f,capas))
+            {
+                transform.position = hit.point;
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                arrastrando = false;
+                accionSoltar.Invoke();
+            }
         }
     }
 
     private void OnMouseDown()
     {
-        if (!agarrando)
-        {
-            ComienzoDeAgarre();
-        }
-    }
-    private void OnMouseUp()
-    {
-        FinDeAgarre();
-    }
-    public void ComienzoDeAgarre()
-    {
-        comienzoDeAgarre.Invoke();
-        agarrando = true;
-        compensar = CamaraPrincipal.WorldToScreenPoint(transform.position) - Input.mousePosition;
+        arrastrando = true;
     }
 
-    public void FinDeAgarre()
+    public void ReiniciarPosicion()
     {
-        finDeAgarre.Invoke();
-        agarrando = false;
+        transform.position = posicionInicial;
     }
 }
