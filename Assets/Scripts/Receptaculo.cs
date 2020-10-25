@@ -15,6 +15,7 @@ public class Receptaculo : MonoBehaviour
     public Planta p;
 
     public float tiempoClic;
+    public bool autoDesactivar = false;
     IEnumerator Start()
     {
         malla.gameObject.SetActive(false);
@@ -39,6 +40,7 @@ public class Receptaculo : MonoBehaviour
             go.transform.Rotate(Vector3.up * 360 / numeroPetalos * i);
             go.transform.parent = transform;
         }
+        this.enabled = !autoDesactivar;
     }
 
 

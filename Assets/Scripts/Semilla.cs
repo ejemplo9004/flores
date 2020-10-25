@@ -7,8 +7,12 @@ public class Semilla : MonoBehaviour
     public Transform pivoteFlor;
     public GameObject lienzo;
      
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
+        if (fc != null)
+        {
+            return;
+        }
         FlowersController fc2 = other.GetComponent<FlowersController>();
         if (fc2 != null)
         {
