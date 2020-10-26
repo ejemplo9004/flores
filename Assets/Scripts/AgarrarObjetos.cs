@@ -33,6 +33,10 @@ public class AgarrarObjetos : MonoBehaviour
             {
                 arrastrando = false;
                 accionSoltar.Invoke();
+                if (hit.collider.tag=="Player")
+                {
+                    transform.parent = hit.transform;
+                }
                 if (animator!= null) animator.SetBool("activo", false);
             }
         }
