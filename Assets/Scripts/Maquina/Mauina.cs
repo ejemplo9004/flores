@@ -7,6 +7,7 @@ public class Mauina : MonoBehaviour
 {
     public Receptor r1;
     public Receptor r2;
+    public AudioSource sonido;
 
     public Button btnFucionar;
     [Space]
@@ -40,6 +41,7 @@ public class Mauina : MonoBehaviour
         {
             return;
         }
+        sonido.Play();
         Preparativos();
         CrearMalla();
         CrearTexturas();

@@ -8,6 +8,7 @@ public class Receptor : MonoBehaviour
     public ParticleSystem particulas;
     public Receptaculo r;
     public GameObject particulasUso;
+    public AudioSource sonido;
 
     private void OnTriggerStay(Collider other)
     {
@@ -20,6 +21,7 @@ public class Receptor : MonoBehaviour
                 other.transform.localPosition = Vector3.zero;
                 r = mf.r;
                 particulas.Play();
+                sonido.Play();
             }
         }
     }
