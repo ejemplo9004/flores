@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/PruebaDeMenu.unity
+    path: Assets/Scenes/Menu.unity
     guid: 0c1dd678073a6e2469c7c1250d73055e
   - enabled: 1
     path: Assets/Scenes/prueba de semilla.unity
     guid: 20b7230b925120d4d981d9b83754ed7e
+  - enabled: 1
+    path: Assets/Scenes/Flores.unity
+    guid: fdf3abf9c1a2eb64cbb976753ae1d231
   m_configObjects: {}
