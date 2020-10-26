@@ -1172,8 +1172,8 @@ MonoBehaviour:
   sol: {x: 1, y: 100, z: 500}
   agua: {x: 2, y: 100, z: 500}
   fertilizante: {x: 5, y: 200, z: 500}
-  velocidad: 0.5
-  velocidadRecurso: 8
+  velocidad: 0.28
+  velocidadRecurso: 10
   flor: {fileID: 0}
   mataPlantada: {fileID: 0}
   mata: {fileID: 475872251798699753, guid: 00e21597e00e8a146ab69700e6229338, type: 3}

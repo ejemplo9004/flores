@@ -30,17 +30,16 @@ public class Camara : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        camara.fieldOfView = zoom;
         if (Input.mouseScrollDelta.y > 0)
         {
-            zoom -= zoomCambioDeTamaño * Time.deltaTime;
-            zoom = Mathf.Clamp(zoom, 20f, 60f);          
+            zoom -= zoomCambioDeTamaño * Time.deltaTime;    
         }
         if (Input.mouseScrollDelta.y < 0)
         {
             zoom += zoomCambioDeTamaño * Time.deltaTime;
-            zoom = Mathf.Clamp(zoom, 20f, 60f);        
         }
+        zoom = Mathf.Clamp(zoom, 20f, 60f);        
+        camara.fieldOfView = zoom;
 
         transform.position = Vector3.Lerp(transform.position, posiciones[indicePosicion].position, 0.1f);
         if (Input.GetMouseButton(2))
@@ -49,7 +48,7 @@ public class Camara : MonoBehaviour
             {
                 posicionMovimientoX -= (Input.GetAxis("Mouse X") * Time.deltaTime * velMovimiento);
                 posicionMovimientoX = Mathf.Clamp(posicionMovimientoX, -rangoMovimiento, rangoMovimiento);
-                posicionMovimientoZ += (Input.GetAxis("Mouse Y") * Time.deltaTime * velMovimiento);
+                posicionMovimientoZ -= (Input.GetAxis("Mouse Y") * Time.deltaTime * velMovimiento);
                 posicionMovimientoZ = Mathf.Clamp(posicionMovimientoZ, -rangoMovimiento, rangoMovimiento);
                 pivote3.localPosition = new Vector3(posicionMovimientoX, 0, posicionMovimientoZ);
             }
@@ -57,7 +56,7 @@ public class Camara : MonoBehaviour
             {
                 transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * Time.deltaTime * velRotacion);
                 anguloX += ( -Input.GetAxis("Mouse Y") * Time.deltaTime * velRotacion);
-                anguloX = Mathf.Clamp(anguloX, 160f, 220f);
+                anguloX = Mathf.Clamp(anguloX, 160f, 245f);
                 pivote2.localEulerAngles = Vector3.right * anguloX;
             }
         }

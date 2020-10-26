@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flor: {fileID: 0}
-  pSuelta: {x: 0, y: 2, z: 0}
+  pSuelta: {x: 0, y: 1.5, z: 0}
   pAgarrada: {x: 0, y: 3, z: 0}
   r: {fileID: 0}
   ago: {fileID: 3655257037029441912}

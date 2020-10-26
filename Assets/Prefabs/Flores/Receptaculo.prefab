@@ -64,6 +64,7 @@ MonoBehaviour:
   aleatoreidad: 0
   p: {fileID: 0}
   tiempoClic: 0
+  autoDesactivar: 0
 --- !u!135 &5121590079724911986
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -75,7 +76,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.8314309
+  m_Radius: 1.58
   m_Center: {x: 0, y: 0.3314309, z: 0}
 --- !u!54 &8258347424329543045
 Rigidbody:

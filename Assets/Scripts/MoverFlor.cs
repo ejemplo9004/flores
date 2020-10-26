@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoverFlor : MonoBehaviour
 {
     public GameObject flor;
-    public Vector3 pSuelta = Vector3.one;
+    public Vector3 pSuelta = Vector3.up;
     public Vector3 pAgarrada;
     public Receptaculo r;
 
@@ -14,6 +14,8 @@ public class MoverFlor : MonoBehaviour
     {
         flor = f;
         r = f.GetComponent<Receptaculo>();
+        flor.transform.localPosition = pSuelta;
+        flor.transform.localEulerAngles = Vector3.zero;
     }
 
     public void PosicionarSuelta()
