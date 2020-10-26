@@ -40,9 +40,9 @@ public class CreadorFlor : MonoBehaviour
     float h3 = 0.5f;
     float s3 = 0;
     float v3 = 1;
-    void Start()
+    public void Suicidarse()
     {
-
+        Destroy(gameObject);
     }
 
     public void CambiarMalla(float c)
