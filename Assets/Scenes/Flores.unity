@@ -290,6 +290,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18932885}
   m_CullTransparentMesh: 0
+--- !u!1 &21884317 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8634738442988693066, guid: 69b1a2a79f0f4f541b813bc9a7bb33bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 68696285}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &36510703
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,6 +1002,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8634738441346177561}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &222544580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8634738442988693066, guid: 69b1a2a79f0f4f541b813bc9a7bb33bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1941918275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &244509629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +1082,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244509629}
   m_CullTransparentMesh: 0
+--- !u!1 &261822813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8634738442988693066, guid: 69b1a2a79f0f4f541b813bc9a7bb33bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8634738441346177561}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &262067930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8634738442988693066, guid: 69b1a2a79f0f4f541b813bc9a7bb33bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1438312736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &286508303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,6 +1893,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416845389}
   m_Mesh: {fileID: 4493585093827132993, guid: b8666ca642b00e2459de79e6821877c7, type: 3}
+--- !u!1 &432858429 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8634738442988693066, guid: 69b1a2a79f0f4f541b813bc9a7bb33bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1217736717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &463735195 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5415317560305793370, guid: aee2403d0cf1c9f41875aaad7f7be427,
@@ -9701,6 +9731,14 @@ MonoBehaviour:
   - {fileID: 611768863}
   - {fileID: 1092803904}
   - {fileID: 164461665}
+  - {fileID: 222544580}
+  - {fileID: 21884317}
+  - {fileID: 432858429}
+  - {fileID: 262067930}
+  - {fileID: 261822813}
+  - {fileID: 1330258959}
+  - {fileID: 1158517777}
+  - {fileID: 149847713}
 --- !u!114 &1527952248
 MonoBehaviour:
   m_ObjectHideFlags: 0
