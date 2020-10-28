@@ -3036,7 +3036,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8750824267121972884}
   m_Direction: 2
   m_MinValue: 0
-  m_MaxValue: 9
+  m_MaxValue: 10
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -7847,6 +7847,7 @@ MonoBehaviour:
   - {fileID: -8044998541274537593, guid: c801a81787fe7034bab2dacc9c6519ee, type: 3}
   - {fileID: 5457426104352543507, guid: c801a81787fe7034bab2dacc9c6519ee, type: 3}
   - {fileID: 7437393351443057600, guid: c801a81787fe7034bab2dacc9c6519ee, type: 3}
+  - {fileID: 5927679529647229121, guid: c801a81787fe7034bab2dacc9c6519ee, type: 3}
   previaPetalo: {fileID: 5316083043970067921}
   patrones:
   - {fileID: 2800000, guid: 72a425fd10d0d0e47ac57c0f536caf07, type: 3}
