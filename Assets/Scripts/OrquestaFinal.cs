@@ -19,6 +19,14 @@ public class OrquestaFinal : MonoBehaviour
         {
             objetosDesactivar[i].SetActive(false);
         }
+        GameObject[] floresVivas = GameObject.FindGameObjectsWithTag("planta");
+        for (int i = 0; i < floresVivas.Length; i++)
+        {
+            if (floresVivas[i].transform.parent == null)
+            {
+                floresVivas[i].SetActive(false);
+            }
+        }
         yield return new WaitForSeconds(tiempoDesactivar/2f);
         animator.enabled = false;
     }
