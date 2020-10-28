@@ -3036,7 +3036,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8750824267121972884}
   m_Direction: 2
   m_MinValue: 0
-  m_MaxValue: 7
+  m_MaxValue: 9
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -7845,6 +7845,8 @@ MonoBehaviour:
   - {fileID: 1471149592384642359, guid: c801a81787fe7034bab2dacc9c6519ee, type: 3}
   - {fileID: -3571639076926766574, guid: c801a81787fe7034bab2dacc9c6519ee, type: 3}
   - {fileID: -8044998541274537593, guid: c801a81787fe7034bab2dacc9c6519ee, type: 3}
+  - {fileID: 5457426104352543507, guid: c801a81787fe7034bab2dacc9c6519ee, type: 3}
+  - {fileID: 7437393351443057600, guid: c801a81787fe7034bab2dacc9c6519ee, type: 3}
   previaPetalo: {fileID: 5316083043970067921}
   patrones:
   - {fileID: 2800000, guid: 72a425fd10d0d0e47ac57c0f536caf07, type: 3}
@@ -7861,7 +7863,7 @@ MonoBehaviour:
     textura1: {fileID: 2800000, guid: 72a425fd10d0d0e47ac57c0f536caf07, type: 3}
     textura2: {fileID: 0}
     color1: {r: 1, g: 1, b: 1, a: 1}
-    color2: {r: 0, g: 0, b: 0, a: 0}
+    color2: {r: 1, g: 1, b: 1, a: 1}
   color1: {r: 1, g: 1, b: 1, a: 1}
   imColor1: {fileID: 8771520118608683131}
   color2: {r: 1, g: 1, b: 1, a: 1}
@@ -7871,7 +7873,7 @@ MonoBehaviour:
   rt: {fileID: 8400000, guid: db778992ceb063c4d9f14cb56f6b9483, type: 2}
   numeroPetalos: 5
   txtNumeroPetalos: {fileID: 7123833063421166633}
-  aleatoreidad: 0
+  aleatoreidad: 10
   prReceptaculo: {fileID: 3966615469989364655, guid: 78dcaa900a2c38345b83c734bd227d80,
     type: 3}
   semilla: {fileID: 0}

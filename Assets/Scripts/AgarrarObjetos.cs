@@ -37,6 +37,10 @@ public class AgarrarObjetos : MonoBehaviour
                 {
                     transform.parent = hit.transform;
                 }
+                else
+                {
+                    transform.parent = null;
+                }
                 if (animator!= null) animator.SetBool("activo", false);
             }
         }
