@@ -11,6 +11,9 @@ public class About : MonoBehaviour
     public float tiempoEntreFrases;
     public Text txtFrases;
     int indice;
+    
+    
+
     private IEnumerator Start()
     {
         do
@@ -24,7 +27,6 @@ public class About : MonoBehaviour
                 }
                 yield return new WaitForSeconds(tiempoEntreLetras);
             }
-
             yield return new WaitForSeconds(tiempoEntreFrases);
             for (int i = 0; i <= frases[indice].Length; i++)
             {
